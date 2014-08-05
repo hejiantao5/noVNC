@@ -41,7 +41,7 @@ function onRfbEvent(evt) {
     if (conf.onKeyPress) {
         Util.Debug("onKeyPress " + (evt.type == 'keydown' ? "down" : "up")
         + ", keysym: " + evt.keysym.keysym + "(" + evt.keysym.keyname + ")");
-        conf.onKeyPress(evt.keysym.keysym, evt.type == 'keydown');
+        conf.onKeyPress(evt.keyId, evt.type == 'keydown');
     }
 }
 
